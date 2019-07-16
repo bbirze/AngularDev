@@ -1,0 +1,18 @@
+
+<h1>Your Shopping Cart</h1>
+
+<div *ngFor="let item of items; let e=even" 
+      [ngClass]="{evenrow:e}" class="itemPanel">
+    <h2>{{item.title}}</h2>
+
+    <p> <label>Quantity</label>
+        <input [(ngModel)]='item.quantity'/>
+    </p>
+    <p> <label>Unit price</label>
+        <span>{{item.price}}</span>
+    </p>
+    <p> <label>Line cost</label>
+        <span>{{item.price * item.quantity}}</span>
+    </p>
+    <button (click)="remove(item.index)">Remove</button>
+</div>

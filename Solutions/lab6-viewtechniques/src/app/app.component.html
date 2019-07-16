@@ -1,0 +1,47 @@
+<h1>Add items to your shopping cart</h1>
+
+<form #f="ngForm" (ngSubmit)="addItem(f)">
+    <p> <label>Product</label>
+        <select [(ngModel)]="selectedProduct" name="product">
+            <option *ngFor="let product of products" [ngValue]="product">{{product.title}}</option>
+        </select>
+    </p>
+
+    <p> <label>Price</label>
+        <input type="number" [value]="selectedProduct?.price" readonly>
+    </p>
+    <p> <label>Quantity</label>
+        <input type="number" [(ngModel)]="quantity" name="quantity" required>
+    </p>
+    <p> <button type="submit" [disabled]="!f.valid">Add</button>
+    </p>
+</form>
+
+<h1>Your Shopping Cart [{{numberItems()}} items in cart]</h1>
+
+<div>
+    Dispaly items from
+    <input type='text' [(ngModel)]='sliceStart'> to
+    <input type='text' [(ngModel)]='sliceEnd'>
+</div>
+
+<div *ngFor="let item of items | slice:sliceStart:sliceEnd; let e=even" [ngClass]="{evenrow:e}" class="itemPanel">
+    <h2>{{item.title | uppercase}}</h2>
+
+    <p> <label>Quantity</label>
+        <input [(ngModel)]='item.quantity' />
+    </p>
+    <p> <label>Unit price</label>
+        <span>{{item.price | currency:'USD':'symbol-narrow'}}</span>
+    </p>
+    <p> <label>Line cost</label>
+        <span>{{(item.price * item.quantity) | currency:'USD':'symbol-narrow'}}</span>
+    </p>
+    <p> <label>Timestamp</label>
+        <span>{{item.timestamp | date}} [{{item.timestamp | date:'hh:mm:ss a'}}]</span>
+    </p>
+    <p> <label>Percent cost</label>
+        <span>{{ ((item.price * item.quantity)/totalCartCost()) | percent:'1.2-2'}}</span>
+    </p>
+    <button (click)="remove(item.index)">Remove</button>
+</div>
