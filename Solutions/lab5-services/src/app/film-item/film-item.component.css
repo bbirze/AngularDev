@@ -1,0 +1,22 @@
+
+.thumbnail {
+    display: block;
+    padding: 10px;
+    margin: 5px;
+    float: left;
+    max-width:  250px;
+    max-height:  300px; 
+    background-color: lightblue;
+    border-color: black;
+    border-style: double;
+    border-width: thin;
+    outline:navy;
+    overflow: auto;
+}
+
+.thumbnail img {
+    max-width:   100%;
+     height: 100px;
+    width: 150px;
+}
+

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Film, FilmService } from './film-service/film-service';
+import { LoggerService } from './common/logger.service';
 
 @Component({
   selector: 'app-root',
@@ -9,12 +10,10 @@ import { Film, FilmService } from './film-service/film-service';
 export class AppComponent {
   title = 'lab5-components';
   films: Array<Film>;
-  private fs : FilmService;
 
-  constructor()  {
-    this.fs = new FilmService();
-    this.films = this.fs.getFilms();
+  constructor(private fs : FilmService,
+              private log: LoggerService)  {
+    this.films = fs.getFilms();
+    this.log.log('AppComponent', 'got a collection of films to display')
   }
-
-
 }

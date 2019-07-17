@@ -1,3 +1,5 @@
+import { Injectable } from '@angular/core';
+import { LoggerService } from '../common/logger.service';
 
 export class Film {
     constructor(
@@ -10,8 +12,12 @@ export class Film {
     }
 }
 
+@Injectable()
 export class FilmService {
+    constructor(private log: LoggerService ) { }
+ 
     getFilms(): Array<Film> {
+        this.log.log('FilmService', `returning a collection of films`)
         var films: Array<Film> = [
             new Film(0, 'Spectre', 'Bond is back in a frantic battle against his classic foe and his white cat', 8.99, 4.9, ['action', 'spy']),
             new Film(1, 'The Hateful Eight', 'Classic Quentin Tarantino sensory indulgence in the wild west', 7.59, 3.8, ['western', 'action']),

@@ -1,18 +1,22 @@
-
-export class Film {
-    constructor(
-        public id: number,
-        public title: string,
-        public blurb: string,
-        public price: number,
-        public score: number,
-        public genres: Array<string>) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var Film = /** @class */ (function () {
+    function Film(id, title, blurb, price, score, genres) {
+        this.id = id;
+        this.title = title;
+        this.blurb = blurb;
+        this.price = price;
+        this.score = score;
+        this.genres = genres;
     }
-}
-
-export class FilmService {
-    getFilms(): Array<Film> {
-        var films: Array<Film> = [
+    return Film;
+}());
+exports.Film = Film;
+var FilmService = /** @class */ (function () {
+    function FilmService() {
+    }
+    FilmService.prototype.getFilms = function () {
+        var films = [
             new Film(0, 'Spectre', 'Bond is back in a frantic battle against his classic foe and his white cat', 8.99, 4.9, ['action', 'spy']),
             new Film(1, 'The Hateful Eight', 'Classic Quentin Tarantino sensory indulgence in the wild west', 7.59, 3.8, ['western', 'action']),
             new Film(2, 'Paddington', 'Furry fun and frosty fridge adventures for all the family', 5.50, 4.2, ['children', 'humour']),
@@ -24,5 +28,8 @@ export class FilmService {
             new Film(8, 'Love Actually', 'Heart-warming yarn of love found and lost at Christmastime', 5.99, 5.0, ['romcom', 'chickflick']),
         ];
         return films;
-    }
-}
+    };
+    return FilmService;
+}());
+exports.FilmService = FilmService;
+//# sourceMappingURL=film-service.js.map
