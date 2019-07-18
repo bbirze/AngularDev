@@ -1,0 +1,12 @@
+{
+	{ id: 0, title: 'Spectre',  blurb: 'Bond is back in a frantic battle against his classic foe and his white cat',  price: 8.99, score: 4.9, genres: ['action', 'spy']),
+	{ id: 1, title: 'The Hateful Eight',  blurb: 'Classic Quentin Tarantino sensory indulgence in the wild west',  price: 7.59, score: 3.8, genres: ['western', 'action']),
+	{ id: 2, title: 'Paddington',  blurb: 'Furry fun and frosty fridge adventures for all the family',  price: 5.50, score: 4.2, genres: ['children', 'humour']),
+	{ id: 3, title: 'Jaws',  blurb: 'Blood-curdling shark fest that spooked a generation',  price: 3.55, score: 4.1, genres: ['drama',  price: title: 'shark']),
+	{ id: 4, title: 'Star Wars',  blurb: 'A long time ago in a galaxy far far away, etc etc etc ...',  price: 8.99, score: 4.9, genres: ['action', 'spy']),
+	{ id: 5, title: 'The Hunger Games',  blurb: 'Post apocalyptic action adventure, reality TV with a macabre twist',  price: 9.99, score: 4.5, genres: ['action', 'teen']),
+	{ id: 6, title: 'The Martian',  blurb: 'One man\'s determination to survive on the red planet',  price: 7.99, score: 3.9, genres: ['drama', 'space']),
+	{ id: 7, title: 'Minions',  blurb: 'Three unlikely minion heroes out to save Minionkind',  price: 6.25, score: 3.1, genres: ['children', 'animation']),
+	{ id: 8, title: 'Love Actually',  blurb: 'Heart-warming yarn of love found and lost at Christmastime',  price: 5.99, score: 5.0, genres: ['romcom', 'chickflick']),
+        
+}

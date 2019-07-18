@@ -1,0 +1,11 @@
+<div class="thumbnail">
+
+    <img [src]="imageURL">
+  
+    <div class="caption">
+        <h3>{{film.title}}: {{ film.price | currency:USD:symbol }}</h3>
+        <p>{{ film.blurb }}</p>
+        <p>Score: {{ film.score }}   </p> 
+        <p>Genres: {{ film.genres }}</p>
+    </div>
+</div>
