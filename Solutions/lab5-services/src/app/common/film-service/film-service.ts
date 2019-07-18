@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { LoggerService } from '../common/logger.service';
+import { LoggerService } from '../logger.service';
 
 export class Film {
     constructor(

@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { FilmItemComponent } from './film-item/film-item.component';
 import { FooterComponent } from './footer/footer.component';
-import { FilmService } from './film-service/film-service';
+import { FilmService } from './common/film-service/film-service';
 
 @NgModule({
   declarations: [

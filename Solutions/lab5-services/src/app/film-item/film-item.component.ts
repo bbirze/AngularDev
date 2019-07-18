@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Film } from '../film-service/film-service';
+import { Film } from '../common/film-service/film-service';
 import { LoggerService } from '../common/logger.service';
 
 @Component({

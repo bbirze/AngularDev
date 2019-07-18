@@ -1,10 +1,10 @@
 .container {
     display: block;
     padding: 10px;
+    clear: both;
 }
 .footer  {
     display: block;  
     padding: 10px;
     float: left;
-    clear: both;
 }
