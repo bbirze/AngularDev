@@ -1,7 +1,7 @@
 
 <h1>Your Shopping Cart</h1>
 
-<div *ngFor="let item of items; let e=even" 
+<div *ngFor="let item of items; let e=even; let i = index" 
       [ngClass]="{evenrow:e}" class="itemPanel">
     <h2>{{item.title}}</h2>
 
@@ -9,10 +9,10 @@
         <input [(ngModel)]='item.quantity'/>
     </p>
     <p> <label>Unit price</label>
-        <span>{{item.price}}</span>
+        <span>${{item.price}}</span>
     </p>
     <p> <label>Line cost</label>
-        <span>{{item.price * item.quantity}}</span>
+        <span>${{item.price * item.quantity}}</span>
     </p>
-    <button (click)="remove(item.index)">Remove</button>
+    <button (click)="remove(i)">Remove</button>
 </div>
