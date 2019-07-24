@@ -5,7 +5,7 @@ class Item {
   // adding visibility modifier makes these params properties
   constructor(public title: string,
               public quantity: number,
-              public price: number,
+              public price: number, 
               public timestamp: Date = new Date()) { }
 }
 
@@ -25,30 +25,11 @@ export class AppComponent {
     this.items.push(new Item('Skis', 4, 250));
     this.items.push(new Item('iPad', 2, 3000));
     this.items.push(new Item('Bugatti', 1, 2000000));
+    this.items.push(new Item('Wine Goblets', 8, 10));
+    this.items.push(new Item('Leather Sofa', 1, 1200));
+    this.items.push(new Item('Lawn Darts', 3, 15));
     this.sliceStart = 0;
     this.sliceEnd= this.items.length;
-  }
-
-  addItem(f : FormGroup)  {
-    let selItem : Item;
-    for(var it of this.items) {
-        if (it.title == this.selectedProduct.title)
-        selItem = it;
-    }
-    if (selItem == undefined) {       // item not in cart
-                                      // instantiate new item
-      selItem = new Item(this.selectedProduct.title, 
-                         this.quantity, 
-                         this.selectedProduct.price)
-      this.items.push(selItem);       // add it to cart
-      this.sliceStart = 0;            // reset slice
-      this.sliceEnd= this.items.length;
-    }  
-    else {                           // just update quantity
-      selItem.quantity += this.quantity;
-    }
-    this.quantity = 0;                // reset form
-    this.selectedProduct = undefined;
   }
 
   remove(index: number) {
