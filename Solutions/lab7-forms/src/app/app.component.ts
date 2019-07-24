@@ -37,7 +37,10 @@ export class AppComponent {
     this.products.push(new Product(1, 'iPad', 3000));
     this.products.push(new Product(2, 'Bugatti', 2000000));
     this.products.push(new Product(3, 'Cardiff City shirt', 5));
-    this.products.push(new Product(4, 'Swansea City shirt', 45));
+    this.products.push(new Product(4, 'Wine Goblets', 10));
+    this.products.push(new Product(5, 'Leather Sofa', 1200));
+    this.products.push(new Product(6, 'Lawn Darts', 15));
+    this.products.push(new Product(7, 'Swansea City shirt', 45));
 
     this.sliceStart = 0;
     this.sliceEnd= this.items.length;
