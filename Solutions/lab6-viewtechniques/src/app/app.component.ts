@@ -8,11 +8,6 @@ class Item {
               public price: number,
               public timestamp: Date = new Date()) { }
 }
-class Product {
-  constructor(public id: number, 
-              public title: string, 
-              public price: number) {}
-}
 
 @Component({
   selector: 'app-root',
@@ -24,21 +19,12 @@ export class AppComponent {
   items: Array<Item> = [];
   sliceStart: number;
   sliceEnd: number;
-  //  Form properties
-  products: Array<Product> = []
-  selectedProduct: Product;
   quantity: number;
 
   constructor() {
-    // this.items.push(new Item('Skis', 4, 250));
-    // this.items.push(new Item('iPad', 2, 3000));
-    // this.items.push(new Item('Bugatti', 1, 2000000));
-    this.products.push(new Product(0, 'Skis', 250));
-    this.products.push(new Product(1, 'iPad', 3000));
-    this.products.push(new Product(2, 'Bugatti', 2000000));
-    this.products.push(new Product(3, 'Cardiff City shirt', 5));
-    this.products.push(new Product(4, 'Swansea City shirt', 45));
-
+    this.items.push(new Item('Skis', 4, 250));
+    this.items.push(new Item('iPad', 2, 3000));
+    this.items.push(new Item('Bugatti', 1, 2000000));
     this.sliceStart = 0;
     this.sliceEnd= this.items.length;
   }

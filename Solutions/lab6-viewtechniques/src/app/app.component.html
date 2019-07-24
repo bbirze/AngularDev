@@ -1,26 +1,5 @@
-<h1>Add items to your shopping cart</h1>
-
-<form #f="ngForm" (ngSubmit)="addItem(f)">
-    <p> <label>Product</label>
-        <select [(ngModel)]="selectedProduct" name="product">
-            <option *ngFor="let product of products" [ngValue]="product">{{product.title}}</option>
-        </select>
-    </p>
-
-    <p> <label>Price</label>
-        <input type="number" [value]="selectedProduct?.price" readonly>
-    </p>
-    <p> <label>Quantity</label>
-        <input type="number" [(ngModel)]="quantity" name="quantity" required>
-    </p>
-    <p> <button type="submit" [disabled]="!f.valid">Add</button>
-    </p>
-</form>
-
-<h1>Your Shopping Cart [{{numberItems()}} items in cart]</h1>
-
 <div>
-    Dispaly items from
+    Display items from
     <input type='text' [(ngModel)]='sliceStart'> to
     <input type='text' [(ngModel)]='sliceEnd'>
 </div>
