@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "lab7-services": {
+    "lab3-databinding": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/lab7-services",
+            "outputPath": "dist/lab3-databinding",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -58,18 +58,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "lab7-services:build"
+            "browserTarget": "lab3-databinding:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "lab7-services:build:production"
+              "browserTarget": "lab3-databinding:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "lab7-services:build"
+            "browserTarget": "lab3-databinding:build"
           }
         },
         "test": {
@@ -106,15 +106,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "lab7-services:serve"
+            "devServerTarget": "lab3-databinding:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "lab7-services:serve:production"
+              "devServerTarget": "lab3-databinding:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "lab7-services"
+  "defaultProject": "lab3-databinding"
 }
