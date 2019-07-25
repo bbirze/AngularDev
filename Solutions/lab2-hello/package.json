@@ -1,5 +1,5 @@
 {
-  "name": "lab2-hello", 
+  "name": "lab-hello", 
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
