@@ -6,7 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FilmItemComponent } from './film-item/film-item.component';
 import { FooterComponent } from './footer/footer.component';
-import { FilmService } from './film-service/film-service';
+import { FilmService } from './common/film-service/film-service';
 import { MenuBarComponent } from './menu-bar/menu-bar.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
